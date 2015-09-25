@@ -1,0 +1,62 @@
+.inner-container {
+	width: 100%;
+	margin: 0; 
+
+	article{
+		width: 24.5vw;
+		height: 24.5vw;
+		display: inline;
+		float: left;
+		position: relative;
+		z-index: 1;
+
+		img{
+			height: 100%;
+			width: 100%; 
+			opacity: 0.8;
+			transition: opacity 0.3s ease;
+
+			&:hover{
+				opacity: 1;
+			}
+		}
+
+		span{
+			background: rgba(0, 0, 0, 0.75);
+			padding: 8px;
+			color: white;
+			position: absolute; 
+			bottom: 20px;
+			left: 0;
+			z-index: 2;
+		}
+
+		i{
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 60px;
+			height: 60px;
+			background: #2a2a2a;
+			border-radius: 100%;
+			color: #AE0D57;
+			font-size: 3.5em;
+    		line-height: 1.35em;
+    		text-align: center;
+    		display: none;
+    		transition: display 0.3s ease;
+
+    		&.show{
+    			display: block;
+    		}
+		}
+	}
+} 
+
+footer{
+	height: 100px;
+	width: 100%;
+}
