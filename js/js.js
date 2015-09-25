@@ -12,16 +12,16 @@ $(document).ready(function()
 			    var link = item.link[0]['@attributes'].href;
 			    var attribute = item.title+' by '+item.author.name;
 
-			    $('#images').append('<article><a href="'+link+'" target="_blank" title="View at Flickr"><img alt="" src="'+imgScr+'" /></a><span>'+attribute+'</span><i class="fa fa-gift"></i></article>');
+			    $('#images').append('<a href="'+link+'" target="_blank" title="View at Flickr"><article style="background-image: url('+imgScr+');"><span>'+attribute+'</span><i class="fa fa-gift"></i></article></a>');
 			});
 		}, error: function(){
 			alert('Something went wrong, please try again.');
 		}
 	});
 
-	$('body').on('mouseenter', 'img',function(){
-		$(this).parent().siblings('i').addClass('show');
-	}).on('mouseleave' , 'img', function(){
-		$(this).parent().siblings('i').removeClass('show');
+	$('body').on('mouseenter', 'article',function(){
+		$(this).children('i').addClass('show');
+	}).on('mouseleave' , 'article', function(){
+		$(this).children('i').removeClass('show');
 	});
 });
